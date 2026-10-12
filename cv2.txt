@@ -1,0 +1,273 @@
+#Initial operations
+>>> 5
+5
+>>> 10+5
+15
+>>> 5*7
+35
+>>> type(5)
+<class 'int'>
+>>> True
+True
+>>> False
+False
+
+#Syntax errors
+>>> true
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'true' is not defined. Did you mean: 'True'?
+>>> False
+False
+>>> false
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'false' is not defined. Did you mean: 'False'?
+>>> type(True)
+<class 'bool'>
+
+#Data types
+>>> 0.0001
+0.0001
+>>> 1e-4
+0.0001
+>>> type(0.0001)
+<class 'float'>
+>>> type(1.0e-4)
+<class 'float'>
+>>> type(1e-4)
+<class 'float'>
+>>> type(1)
+<class 'int'>
+>>> type(1.0)
+<class 'float'>
+>>> 'a'
+'a'
+>>> "a"
+'a'
+>>> type('a')
+<class 'str'>
+>>> 'Hello world'
+'Hello world'
+
+#Functions
+>>> sqrt(9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'sqrt' is not defined
+>>> from math import sin
+>>> sqrt(9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'sqrt' is not defined
+>>> sin(0)
+0.0
+>>> from math import *
+>>> sqrt(9)
+3.0
+
+#nan + inf
+>>> 2/0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+>>> sqrt(-9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: math domain error
+>>> asin(5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: math domain error
+
+#Limits
+>>> 2**3
+8
+>>> 2**64
+18446744073709551616
+>>> 2**128
+340282366920938463463374607431768211456
+>>> 2**1000
+10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069376
+>>> 2.0**127
+1.7014118346046923e+38
+>>> 2.0**256
+1.157920892373162e+77
+>>> 2.0**512
+1.3407807929942597e+154
+>>> 2.0**1024
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+OverflowError: (34, 'Result too large')
+>>> 2.0**-127
+5.877471754111438e-39
+>>> 2.0**-256
+8.636168555094445e-78
+>>> 2.0**-512
+7.458340731200207e-155
+>>> 2.0**-1012
+2.2784756311113742e-305
+>>> 2.0**-1024
+5.562684646268003e-309
+>>> 2.0**-2000
+0.0
+>>> pi
+3.141592653589793
+>>> sin(pi/4)
+0.7071067811865476
+>>> asin(sin(pi/4))
+0.7853981633974484
+>>> asin(sin(0.5))
+0.5
+>>> atan(tan(0.5))
+0.5
+>>> 0.5==asin(sin(0.5))
+True
+>>> a=1.0
+>>> b=1.0e-15
+>>> a-b
+0.999999999999999
+>>> b=0.00000000000000001
+>>> a-b
+1.0
+>>> a === a-b
+  File "<stdin>", line 1
+    a === a-b
+        ^
+SyntaxError: invalid syntax
+>>> a== a-b
+True
+>>> c = 1.0e20
+>>> d =1
+>>> c+d
+1e+20
+>>> c+d == c+
+  File "<stdin>", line 1
+    c+d == c+
+             ^
+SyntaxError: invalid syntax
+>>> c+d == c
+True
+>>> print('\t')
+
+>>> print('hello\tworld')
+hello   world
+>>> print('hello\nworld')
+hello
+world
+>>> print('hello'world')
+  File "<stdin>", line 1
+    print('hello'world')
+                      ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> print('hello\'world')
+hello'world
+
+#Variables
+>>> a=10
+>>> type(a)
+<class 'int'>
+>>> b=1.0e5
+>>> type(b)
+<class 'float'>
+>>> c=True
+>>> type(c)
+<class 'bool'>
+>>> a, b, c = 10, 1.0e5,True
+>>> a:int = 7
+>>> a:int = 7.0
+>>> a = b + c +17
+>>> a = a+1
+>>> a=a-1
+>>> xa,ya = 0,0
+>>> xb,yb = 10,10
+>>> dx,dy = xb - xa, yb - ya
+>>> dist = sqrt(dx**2+dy*dy)
+>>> print(dist)
+14.142135623730951
+
+#Conversions
+>>> x=True
+>>> y=10
+>>> z=7.35
+>>> w=x+y+z
+>>> type(w)
+<class 'float'>
+>>> t=int(w)
+>>> print(t)
+18
+>>> t=int(z)
+>>> print(t)
+7
+>>> z=7.53
+>>> t=int(z)
+>>> print(t)
+7
+>>> round(z)
+8
+>>> s=bool(t)
+>>> print(s)
+True
+
+#Operators
+>>> 5//2
+2
+>>> 5%2
+1
+>>> 5**2
+25
+>>> 5^2
+7
+>>> x=y
+>>> x=x+10
+>>> x+=10
+>>> (-9)**(1/2)
+(1.8369701987210297e-16+3j)
+>>> 12//5
+2
+>>> 12%5
+2
+>>> 13%5
+3
+>>> 13//8
+1
+>>> 13//5
+2
+
+
+#Operators 2
+>>> x==y
+False
+>>> 0<=x<=10
+False
+>>> x
+30
+>>> x!=y
+True
+>>> x
+30
+>>> y
+10
+>>>
+
+#Input
+>>> r = input()
+10
+>>> r = input('Input radius: ')
+Input radius: 10
+>>> O = 2 * pi
+>>> O = 2 * pi * r
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't multiply sequence by non-int of type 'float'
+>>> type(r)
+<class 'str'>
+>>> r= int(r)
+>>> r= float(r)
+>>> O = 2 * pi * r
+>>> S = pi * r * r
+>>> print('Obvod: ', O)
+Obvod:  62.83185307179586
+>>> print('Obsah: ', S)
+Obsah:  314.1592653589793
+>>>
